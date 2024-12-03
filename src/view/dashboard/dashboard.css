@@ -1,0 +1,905 @@
+:root{
+    --color-menu-lateral:white;
+
+    --color-texto:black;
+    --color-texto-menu:black;
+
+    --color-button:white;
+    --color-button-text:black;
+    --color-hover-tec:#1B396A;
+    --color-text-hover-wh: white;
+    --color-gris:#DDDDD2;
+    --color-naranja:#f7841fe3;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu-lateral{
+    position: fixed;
+    box-shadow: 4px 12px 6px 0px #8EA095;
+    width: 300px;
+    height: 100vh;
+    overflow: hidden;
+    padding: 20px 15px;
+    background-color:var(--color-menu-lateral);
+    transition: width 0.5s ease;
+    z-index: 100;/**Para que se muestre encima de todo el contenido de la página*/
+}
+
+/**Opciones del menu icono*/
+.menu-lateral .options{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-lateral .options img{
+    min-width: 30px;
+    font-size: 40px;
+    cursor: pointer;
+}
+.mini-menu-lateral{
+    width: 68px;
+    height: 100vh;
+    padding: 20px 15px;
+    background-color: var(--color-menu-lateral);
+}
+.menu-lateral span{
+    width: 100px;
+    white-space: nowrap;/**Evita salto de linea*/
+    font-size: 20px;
+    margin-left: 10px;
+    opacity: 1;
+    transition: opacity 0.5s ease, width 0.5s ease;
+}
+.menu-lateral span.oculto{
+    opacity: 0;
+    width: 0;
+}
+.menu-lateral .options{
+    margin-bottom: 40px;
+}
+/**Opciones del menu*/
+.menu-lateral .boton{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    border: none;
+    background-color: var(--color-button);
+
+    color: var(--color-button-text);
+}
+
+.menu-lateral .boton img{
+    min-width: 35px;
+    font-size: 25px;
+}
+
+/**Menu de navegación*/
+.menu-lateral .navegacion li{
+    list-style: none;
+    display: flex;
+    margin-bottom: 5px;
+}
+.menu-lateral .navegacion a{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-texto);
+    border-radius: 10px;
+}
+.menu-lateral .navegacion a:hover{
+    background-color:var(--color-hover-tec) ;
+    color: var(--color-text-hover-wh);
+    cursor: pointer;
+}
+.menu-lateral .navegacion img{
+    min-width: 40px;
+    font-size: 35px;
+}
+.menu-lateral .navegacion span{
+    margin-left: 15px;
+}
+
+/**separador*/
+
+.menu-lateral .linea{
+    border: 0.5px solid #cecece;
+    margin-bottom: 20px;
+    margin-top: 80px;
+}
+
+/**Usuario*/
+.menu-lateral .usuario
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.menu-lateral .usuario .imgLab{
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+.menu-lateral .usuario .info-usuario{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.menu-lateral .usuario .nombre-email{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+.menu-lateral .usuario .nombre{
+    font-size: 15px;
+    font-weight: 600;
+}
+.menu-lateral .usuario .email{
+    font-size: 15px;
+}
+.menu-lateral .usuario .icon{
+    /*font-size: 15px;*/
+    cursor: pointer;
+    width: 35px;
+    height: auto;
+}
+.menu-lateral .usuario .icon:hover{
+    background-color: #8EA095;
+}
+
+.menu-lateral .menu-desplegable {
+    display: none;
+    /*position: absolute;*/
+    top: 100%;
+    right: 5px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    font-size: 15px;
+}
+
+.menu-lateral .menu-desplegable ul {
+    list-style: none;
+    margin: 0;
+    padding: 5px 0;
+}
+
+.menu-lateral .menu-desplegable li {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.menu-lateral .menu-desplegable li:hover {
+    background-color: #f5f5f5;
+}
+
+/**Contenido-main*/
+/*
+#inicio{
+    background-color: var(--color-hover-tec);
+    color: var(--color-text-hover-wh);
+}
+#add-user-select{
+    background-color: var(--color-hover-tec);
+    color: var(--color-text-hover-wh);
+}*/
+
+.desactive{
+    color: var(--color-texto);
+    background-color: white;
+}
+/*
+.menu-select{
+    background-color: var(--color-hover-tec);
+    color: var(--color-text-hover-wh);
+}
+.menu-select span{
+    color: var(--color-text-hover-wh);
+}*/
+
+/**Reflejar el hover*/
+.active{
+    background-color: var(--color-hover-tec);
+    color: var(--color-text-hover-wh);
+}
+.active span{
+    color: var(--color-text-hover-wh);
+}
+
+main{
+    margin-left: 300px;
+    padding: 20px;
+    padding-top: 5px;
+    transition: margin-left 0.5s ease;
+}
+main.min-main{
+    margin-left: 80px;
+}
+    /**Titulo del sistema*/
+main .titulo{
+    background-color: var(--color-gris);
+    border-radius: 10px;
+    height: 45px;
+    align-content: center;
+}
+main .titulo h2{
+    margin-left: 10px;
+}
+/**Titulo del apartado en que esta */
+main .tipo-opcion{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+main .tipo-opcion img{
+    width: 30px;
+    height: auto;
+}
+main .tipo-opcion span{
+    margin-left: 8px;
+    font-size: 20px;
+}
+
+/**Div interno a las opciones*/
+main .interno-opciones{
+    width: 100%;
+    height: 580px;
+    border-radius: 23px;
+    box-shadow: 0px 10px 6px 0px #8EA095;
+}
+main .sub-interno{
+    display: grid;
+    grid-template-columns:55ch auto;
+    column-gap: 5px;
+    row-gap: 30px;
+    padding: 40px;
+}
+
+main .sub-interno .option-click{
+    background-color:var(--color-text-hover-wh);
+    box-shadow: 0px 10px 6px 0px #8EA095;
+    width: 350px;
+    height: 60px;
+    border: #8EA095;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-left: 80px;
+    border-radius: 10px;
+    color: var(--color-texto);
+    font-size: 20px;
+    text-decoration: none;
+}
+main .sub-interno .option-click:hover{
+    cursor: pointer;
+    background-color: #d7e1da;
+    color: var(--color-text);
+    font-weight: 800;
+}
+
+main .sub-interno .option-click .option1{
+    gap: 1em;
+    grid-column: 1; /* Primera columna */
+    grid-row: 1;
+}
+.option2{
+    gap: 1em;
+    grid-column: 2; /* segunda columna */
+    grid-row: 1;
+}
+.option3{
+    gap: 1em;
+    grid-column: 1; /* Primera columna */
+    grid-row: 2;
+}
+.option4{
+    gap: 1em;
+    grid-column: 2; /* segunda columna */
+    grid-row: 2;
+}
+.option5{
+    gap: 1em;
+    grid-column: 1; /* segunda columna */
+    grid-row: 3;
+}
+.option6{
+    gap: 1em;
+    grid-column: 2; /* segunda columna */
+    grid-row: 3;
+}
+
+
+/**Estilos para el search de alumnos activos*/
+.divInterno .encabezado #searchAct{
+    margin-left: 850px;
+}
+/**Estilos de los botones de la tabla en horarios*/
+#alumnosActiveTable{
+    margin-left: 50px;
+}
+#alumnosActiveTable .tbActivos .horario  .horario-btn{
+    width: 150px;
+    height: 25px;
+    background: var(--color-gris) ;
+}
+#alumnosActiveTable .tbActivos .horario  .horario-btn:hover{
+    background:var(--color-hover-tec);
+    color: white;
+}
+
+
+/**Estilos para el search de alumnos inactivos*/
+.divInterno .encabezado #searchInact{
+    margin-left: 900px;
+}
+/**Estilos de los botones de la tabla en horarios*/
+#alumnosInactiveTable{
+    margin-left: 50px;
+}
+#alumnosInactiveTable #tablaAlumInactives .horario  .horario-btn{
+    width: 150px;
+    height: 25px;
+    background: var(--color-gris) ;
+}
+#alumnosInactiveTable #tablaAlumInactives .horario  .horario-btn:hover{
+    background:var(--color-hover-tec);
+    color: white;
+}
+
+/**OPCION AGREGAR ALUMNOS*/
+
+.interno-opciones2{
+    width: 100%;
+    height: 580px;
+    border-radius: 23px;
+    box-shadow: 0px 10px 6px 0px #8EA095;
+}
+.interno-opciones2 .divInterno{
+    margin-top: 30px;
+}
+.encabezado{
+    display: flex;
+    gap: 0.5em;
+}
+.imgPlus{
+    margin-left: 10px;
+}
+.btnNew{
+    border-radius: 28px;
+    background-color: #FAECBB;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+}
+.encabezado .search{
+    display: flex;
+    border-radius: 28px;
+    width: 250px;
+    height: 30px;
+    margin-left: 680px;
+    align-items: center;
+    cursor: text;
+    align-items: center;
+}
+.encabezado .search input{
+    text-decoration: none;
+    color: black;
+    cursor: text;
+    width: 90%;
+    border-radius: 28px;
+    font-size: 18px;
+    padding-left: 8px;
+    height: 30px;
+}
+.search img{
+    margin-left: 5px;
+    margin-top: 5px;
+}
+table{
+    width: 580px;
+    align-items: center;
+    margin: auto;
+    font-size: 18px;
+}
+thead th{
+    background-color: #F7B850;
+}
+table .tblAlum .acciones .opcionesAc{
+    width: auto;
+    height: 30px;
+    align-items: center;
+}
+
+table .tblAlum .acciones .opcionesAc button{
+    margin-left: 3px;
+    width: 50px;
+    height: 25px;
+    background: white;
+}
+table .tblAlum .acciones .opcionesAc button:hover{
+    background:var(--color-gris);
+}
+
+table .tblAlum .acciones .opcionesAc{
+    display: flex;
+}
+table .tblAlum .acciones .opcionesAc img{
+    width: 25px;
+    height: 25px;
+}
+.content2{
+    display: flex;
+}
+.content .divBack{
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.content .divBack img{
+    cursor: pointer;
+}
+.content2 .izquierdo{
+    width: 50%;
+    height: 100%;
+    font-size: 18px;
+    padding: 40px;
+}
+.content2 .izquierdo input{
+    width: 300px;
+    height: 25px;
+    padding-left: 10px;
+}
+.content2 .izquierdo select{
+    width: 300px;
+    height: 25px;
+    font-size: 16px;
+}
+.content2 .derecho{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    font-size: 18px;
+    padding: 40px;
+}
+.content2 .derecho label{
+    font-size: 18px;
+}
+.content2 .derecho input{
+    width: 300px;
+    height: 25px;
+}
+.content2 #active, #aServicio{
+    width: 20px;
+    height: 20px;
+}
+.content{
+    align-content: center;
+}
+
+.content .botones{
+    margin-left: 350px;
+    margin-top: 30px;
+}
+.content .botones button{
+    width: 80px;
+    height: 30px;
+    border: 2px solid;
+    border-radius: 5px;
+    background: var(--color-hover-tec);
+    cursor: pointer;
+    color: white;
+    margin-left: 15px;
+    font-size: 16px;
+}
+.content .botones .btnADD:hover{
+    background-color: #9b9595;
+    color: black;
+    border: none;
+}
+.content .botones .btnCLEAN:hover{
+    background-color: #9b9595;
+    color: black;
+    border: none;
+}
+.content .oModal{
+    border-radius: 5px;
+    background: var(--color-hover-tec);
+    cursor: pointer;
+    color: white;
+    width: 150px;
+    height: 30px;
+    padding: auto;
+    border: none;
+}
+.content .oModal:hover{
+    background: var(--color-naranja);
+    color: black;
+}
+/**Termina el register_students*/
+
+/**Sub de agregar alumnos*/
+.izquierdo{
+    width: 50%;
+    height: 100%;
+    font-size: 18px;
+    padding: 40px;
+}
+.izquierdo input{
+    width: 300px;
+    height: 25px;
+}
+.izquierdo select{
+    width: 300px;
+    height: 25px;
+    font-size: 16px;
+}
+.derecho{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    font-size: 18px;
+    padding: 40px;
+}
+.derecho input{
+    width: 300px;
+    height: 25px;
+}
+#active, #aServicio{
+    width: 20px;
+    height: 20px;
+}
+.modalHorario {
+    display: none;
+    position: fixed;
+    z-index: 1; 
+    top: 37%;
+    left: 60%;
+    width: 600px;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+}
+.modalHorario .title{
+    color: white;
+}
+
+.horarioContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid ;
+    border-color: var(--color-hover-tec);
+    width: 80%;
+    /*max-width: 600px;*/
+    max-height: 80%;
+    text-align: center;
+    background: var(--color-hover-tec);
+    overflow-y: auto;
+}
+
+.horarioContent h4{
+    color: var(--color-text-hover-wh);
+}
+
+.close-btn {
+    float: right;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#days {
+    display: grid;
+    gap: 15px;
+}
+
+/* Define el layout en formato grid */
+.grid-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas, una para cada día */
+    gap: 3px;
+    margin-bottom: 8px;
+}
+
+.header-row {
+    font-weight: bold;
+    text-align: center;
+}
+
+.day-header {
+    padding: 6px;
+    background-color: #f0f0f0;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.hour-btn {
+    padding: 6px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    text-align: center;
+}
+
+.hour-btn.selected {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.hour-btn.selectedAc {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.register-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.register-btn:hover{
+    background:#cecece;
+    color: black;
+}
+.clean-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.clean-btn:hover{
+    background:#cecece;
+    color: black;
+}
+/**Termino de seccion agregar alumnos*/
+
+/**Estilos registrar asistencia*/
+.mostrarHora{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.mostrarHora span{
+    font-size: 20px;
+    font-weight: 600;
+}
+.mostrarHora .mfecha{
+    margin-left: 650px;
+}
+.registrarAsistencia{
+    margin-top: 50px;
+    align-items: center;
+    align-content: center;
+    width: 450px;
+    height: 150px;
+    margin-left: 350px;
+}
+.registrarAsistencia span{
+    font-size: 20px;
+}
+.registrarAsistencia input{
+    border:2px solid black;
+    border-radius: 15px;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+.registrarAsistencia button{
+    margin-left: 15px;
+    border-radius: 15px;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    background-color: #D9D9D9;
+    color: black;
+    font-family: 'Trebuchet MS';
+    border-style: none;
+}
+.registrarAsistencia button:hover{
+    background-color: #9b9595;
+    color: black;
+}
+
+/**Terminar registrar asistencia*/
+
+
+/**ESTILOS DE ASISTENCIAS DEL DIA*/
+.mostrarFecha{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.mostrarFecha span{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+/**ESTILO PARA REPORTES*/
+
+.divInterno{
+    margin-left: 20px;
+    align-content: center;
+    font-size: 20px;
+    width: 100%;
+}
+.divInterno form{
+    margin-bottom: 10px;
+}
+.divInterno span{
+    font-size: 22px;
+}
+.divInterno input{
+    font-size: 20px;
+}
+.divInterno button{
+    border-radius: 15px;
+    width: 200px;
+    height: 35px;
+    font-size: 18px;
+    background-color: #D9D9D9;
+    color: black;
+    font-family: 'Trebuchet MS';
+    border-style: none;
+    margin-left: 65px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+.divInterno button:hover{
+    background-color: #9b9595;
+    color: black;
+}
+.divInterno select{
+    font-size: 15px;
+}
+.divInterno select option{
+    font-size: 15px;
+}
+
+
+/**Modal de activos*/
+.modalHorarioAc {
+    display: none;
+    position: fixed;
+    z-index: 1; 
+    top: 37%;
+    left: 60%;
+    width: 550px;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+.modalHorarioAc .title{
+    color: white;
+}
+
+.modalHorarioAc #closeModal{
+    color: white;
+    font-weight: 100;
+}
+.horarioContentAc {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid ;
+    border-color: var(--color-hover-tec);
+    width: 80%;
+    /*max-width: 600px;*/
+    max-height: 80%;
+    text-align: center;
+    background: var(--color-hover-tec);
+    overflow-y: auto;
+    position: absolute;
+    transform: translate(45%, -50%);
+    
+}
+
+.horarioContentAc h3{
+    color: var(--color-text-hover-wh);
+}
+
+
+/**Modal de inactivos*/
+/**Modal de activos*/
+.modalHorarioInac {
+    display: none;
+    position: fixed;
+    z-index: 1; 
+    top: 37%;
+    left: 60%;
+    width: 550px;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+.modalHorarioInac .title{
+    color: white;
+}
+
+.modalHorarioInac #closeModal{
+    color: white;
+    font-weight: 100;
+}
+.horarioContentInac {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid ;
+    border-color: var(--color-hover-tec);
+    width: 80%;
+    /*max-width: 600px;*/
+    max-height: 80%;
+    text-align: center;
+    background: var(--color-hover-tec);
+    overflow-y: auto;
+    position: absolute;
+    transform: translate(45%, -50%);
+    
+}
+
+.horarioContentInac h3{
+    color: var(--color-text-hover-wh);
+}
+
+/**Tabla de asistencia*/
+.tabla #asistencias{
+    text-align: center;
+}
+/**Estilos para QR*/
+.divInterno .codAlumno{
+    border-radius: 15px;
+    padding-left: 8px;
+}
+.divInterno .generar, .descargar{
+    border-radius: 15px;
+    width: 200px;
+    height: 35px;
+    font-size: 18px;
+    background-color: #D9D9D9;
+    color: black;
+    font-family: 'Trebuchet MS';
+    border-style: none;
+    margin-left: 65px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+.divInterno .generar:hover{
+    background-color: #9b9595;
+    color: black;
+}
+.divInterno .descargar:hover{
+    background-color: #9b9595;
+    color: black;
+}
+.divInterno #imgCodigo{
+    margin-left: 80px;
+}

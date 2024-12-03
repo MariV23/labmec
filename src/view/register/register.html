@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <title>Registrar Usuario</title>
+</head>
+<body>
+    <div class="principal">
+        <div class="segundo">
+            <div>
+                <img src="../assets/chevron-left-circle-solid-24.png" id="back">
+            </div>
+            <div class="izq">
+                <form id="formRegis">
+                    <label for="name" class="name" id="id_name">Nombre:</label> <br> 
+                    <input id="name" type="text" class="name"><br> <br>
+                    <label for="surnames" class="surnames" id="id_surnames">Apellidos:</label> <br> 
+                    <input id="surnames" type="text" class="surname"><br> <br>
+                    <label for="nControl" class="nC" id="id_nControl">No. Control:</label> <br> 
+                    <input id="nControl" type="text" class=" nControl"><br> <br>
+                    <label for="nPhone" class="nP" id="id_nPhone">No. Teléfono:</label> <br> 
+                    <input id="nPhone" type="tel" class="nPhone">
+                </form>
+            </div>
+            <div class="der">
+                <form >
+                    <label for="email" class="email" id="id_email" aria-placeholder="email">Correo electrónico:</label> <br> 
+                    <input id="email" type="email" class=" email"><br> <br>
+                    <label for="nameUser" class="nameUser" id="id_nameUser">Nombre de Usuario:</label> <br> 
+                    <input id="nameUser" type="text" class="nameUserI"><br> <br>
+                    <label for="pas" class="pass" id="id_pass">Contraseña:</label><br>
+                    <div class="contra">
+                        <input id="pas" type="password" class="pasw" ><br>
+                        <img src="../assets/eye_hide.png" height="24px" id="vision">
+                    </div> 
+                    <br>
+                    <label for="conpas" class="paswo" id="id_pasw">Confirmación de contraseña:</label> <br> 
+                    <div class="contra">
+                        <input id="conpas" type="password" class="paswoI">
+                        <img src="../assets/eye_hide.png" height="24px" id="visionCon">
+                    </div> 
+                    <div class="bRegis">
+                        <button id="btnRegistrar" type="button" class="btnR">Registrar</button>
+                    </div>
+                </form>
+                <div id="error-message" style="color: red;">
+                    <!--<img src="../assets/info-circle-regular-24.png">-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./register.js"></script>
+</body>
+</html>

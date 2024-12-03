@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="interno-opciones4">
+            
+        <div class="tipo-opcion">
+            <img src="../assets/engrane.png">
+            <span>Alumnos en capacitación</span>
+        </div>
+
+        <div class="divInterno">
+            <div class="encabezado">
+                <div class="search">
+                    <label for="search"><img src="../assets/search-regular-24.png"></label>
+                    <input type="text" placeholder="Buscar" id="searchInac">
+                </div>
+            </div>
+            
+            <table class="tblInactiveStudents" id="alumnosInactiveTable">
+                <thead>
+                    <tr>
+                        <th class="thName">Nombre</th>
+                        <th class="thMaquina">Maquina Asignada</th>
+                        <th>Horario</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaAlumInactives">
+                    
+                </tbody>
+               
+            </table>
+        </div>
+        <div class="modalHorarioInac" id="modalInactivos">
+            <div class="horarioContentInac">
+                <span class="close-btn" id="closeModal">&times;</span> 
+                <h3 class="title">Horario disponible</h3>
+                    <br>
+                <div id="days">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

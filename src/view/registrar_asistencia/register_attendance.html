@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Asistencia</title>
+</head>
+<body>
+    <div class="interno-opciones5">
+            
+        <div class="tipo-opcion">
+            <img src="../assets/engrane.png">
+            <span>Registrar Asistencia</span>
+        </div>
+        <div class="mostrarHora">
+            <span>Hora: </span>
+            <span id="hora"></span>
+            <span class="mfecha">Fecha:</span>
+            <span id="fecha" class="fechaAct"></span>
+        </div>
+        
+        <div id="registrarAsis" class="registrarAsistencia">
+            <span>Ingresa N° de Control:</span>
+            <br><br>
+            <input type="text" pattern="[0-9]*" inputmode="numeric" id="regisAsistencia" placeholder="Escanea o ingresa tu N° Control">
+            <br> <br>
+            <button id="regisEnt">
+                Registrar entrada
+            </button>
+            <button id="regisSal">
+                Registrar salida
+            </button>
+        </div>
+    </div>
+    <!-- <script src="./register_atten.js"></script> -->
+</body>
+</html>

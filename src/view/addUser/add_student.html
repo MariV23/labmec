@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="addStu.css">
+    <title>Agregar estudiante</title>
+</head>
+<body>
+    <div class="interno-opciones">
+            
+        <div class="tipo-opcion">
+            <img src="../assets/engrane.png">
+            <span>Alumnos </span>
+        </div>
+
+        <div class="dInterno">
+            <div class="izquierdo">
+                <form action="">
+                    <label for="name">Nombre:</label> <br> 
+                    <input type="text" id="name">  <br>
+                    <label for="surname">Apellidos:</label> <br>
+                    <input type="text" id="surname"><br>
+                    <label for="nControl">Número de control:</label><br>
+                    <input type="text" name="nControl" id="nControl"><br>
+                    <label for="correo">Correo electrónico:</label><br>
+                    <input type="text" id="correo"><br>
+                    <label for="mAsignada">Máquin asignada:</label><br>
+                    <select name="mAsignada" id="mAsignada">
+                        <Option value="Torno">Torno</Option>
+                        <option value="Maquinado 3 ejes">Maquinado de 3 ejes</option>
+                    </select>
+                </form>
+            </div>
+            <div class="derecho">
+                <h5>Estado:</h5>
+                <form action="">
+                    <input type="radio" name="status" id="active" value="activo">
+                    <label for="active">Activo</label> <br>
+                    <input type="radio" name="status" id="aServicio">
+                    <label for="aServicio">Adelanto de servicio</label> <br>
+                    <label for="fIngreso">Fecha de ingreso:</label>
+                    <input type="date" name="dateInput" id="date">
+                </form>
+                
+            </div>
+            
+        </div>
+    </div>
+    <script src="./addUser.js"></script>
+</body>
+</html>

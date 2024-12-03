@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes</title>
+</head>
+<body>
+    <div class="interno-opciones6">
+        <div class="tipo-opcion">
+            <img src="../assets/engrane.png">
+            <span>Reportes</span>
+        </div>
+        <div class="divInterno">
+            <span>Generar reporte de acuerdo a:</span> <br> <br>
+            <form id="formReport">
+                <input type="checkbox" name="" id="alumno">
+                <label for="alumno">Alumno:</label>
+                <br>
+                <label for="nControl">N° Control:</label>
+                <input type="text" name="" id="nControl">
+                <label for="fechaInp">Fecha:</label>
+                <input type="date" name="" id="fechaInp">
+                <br>
+                <input type="checkbox" name="" id="mensual">
+                <label for="mensual">Mensual:</label>
+                <br>
+                <label for="mes">Mes:</label>
+                <select name="" id="mes">
+                    <option value="" disabled selected hidden>Selecciona el mes</option>
+                    <option value="01">Enero</option>
+                    <option value="02">Febrero</option>
+                    <option value="03">Marzo</option>
+                    <option value="04">Abril</option>
+                    <option value="05">Mayo</option>
+                    <option value="06">Junio</option>
+                    <option value="07">Julio</option>
+                    <option value="08">Agosto</option>
+                    <option value="09">Septiembre</option>
+                    <option value="10">Octubre</option>
+                    <option value="11">Noviembre</option>
+                    <option value="12">Diciembre</option>
+                </select>
+                <input type="radio" name="status" id="activos" value="activo">
+                <label for="activos">Activos</label>
+                <input type="radio" name="status" id="capacitacion" value="capacitacion">
+                <label for="capacitacion">En capacitacion</label>
+            </form>
+            <br> <br>
+            <button id="generarReport" class="generar">
+                Generar reporte
+            </button>
+        </div>
+    </div>
+</body>
+</html>

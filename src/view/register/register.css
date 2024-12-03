@@ -1,0 +1,80 @@
+.principal{
+    background-color: #FFFF;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.segundo{
+    display: flex;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+}
+.izq{
+    width: 50%;
+    height: 100%;
+    font-size: 18px;
+    padding: 40px;
+}
+.izq input{
+    width: 300px;
+    height: 25px;
+    
+}
+.der{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    font-size: 18px;
+    padding: 40px;
+}
+.der input{
+    width: 300px;
+    height: 25px;
+}
+#btnRegistrar{
+    position: absolute;
+    bottom: 150px; 
+    right: 50px;  
+    border-radius: 10px;
+    border-style: none;
+    background-color: rgba(115, 112, 112, 0.797); 
+    font-size: 18px;
+    width: 160px;
+    height: 30px;
+    cursor: pointer;
+}
+#btnRegistrar:hover{
+    background-color: #F58B2C;
+    cursor: pointer;
+}
+
+.contra{
+    display: flex; 
+    border: 1.5px solid gray;
+    width: 305px;
+}
+.contra img{
+    gap: 1em;
+}
+#pas{
+    width: 270px;
+    border: none;
+}
+#conpas{
+    width: 270px;
+    border: none;
+}
+#vision{
+    cursor: pointer;
+}
+#visionCon{
+    cursor: pointer;
+}
+#eye{
+    width: 20px;
+}
+#back{
+    cursor: pointer;
+}

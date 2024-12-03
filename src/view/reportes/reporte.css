@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.encabezado{
+    display: flex;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+.encabezado .titulo{
+    padding: 10px;
+    text-align: center;
+    margin-left: 25%;
+}
+.encabezado .logo{
+    width: 65px;
+    height: auto;
+    gap: 1em;
+    margin-top: 10px;
+    margin-left: 80%;
+}

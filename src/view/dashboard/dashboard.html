@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio de Mecánica</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="menu-lateral">
+        <div class="options">
+            <img src="../assets/list-ul-regular-24.png" id="btn-menu">
+        </div>
+
+        <nav class="navegacion">
+            <ul>
+                <li>
+                    <a id="inicio" href="" class="menu-select">
+                        <img src="../assets/dashboard-solid-24.png" class="imgDash">
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="add-new-user" href="" class="">
+                        <img src="../assets/user-plus-solid-24.png" class="imgAddUser">
+                        <span>Agregar alumno</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="alumActives" href="">
+                        <img src="../assets/user-check-solid-24.png" class="imgActUser">
+                        <span>Alumnos activos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" id="list_inactive_students">
+                        <img src="../assets/user-solid-24.png" class="imgNActUser">
+                        <span>Alumnos en capacitación</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" id="register_attendance">
+                        <img src="../assets/time-solid-24.png" class="imgAssent">
+                        <span>Registrar asistencia</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" id="attendance_for_day">
+                        <img src="../assets/calendar-check-solid-24.png" class="imgAssentD">
+                        <span>Asistencias del día</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" id="reports">
+                        <img src="../assets/file-solid-24.png" class="imgFile">
+                        <span>Reportes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" id="codigos">
+                        <img src="../assets/qr-regular-24.png" class="imgFile">
+                        <span>Códigos Qr</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div>
+            <div class="linea"></div>
+
+            <div class="usuario">
+                <img src="../assets/user-mec.png" alt="" class="imgLab">
+                <div class="info-usuario">
+                    <div class="nombre-email">
+                        <span class="nombre" id="user-name"></span>
+                        <span class="email" id="user-email"></span>
+                    </div>
+                    <img src="../assets/dots-vertical-rounded-regular-24.png" class="icon" id="menu-toggle">
+                    <div class="menu-desplegable" id="dropdown-menu">
+                        <ul>
+                            <li id="logout">Cerrar Sesión</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="titulo">
+            <h2>Sistema de Servicio Social Metal-Mecánica</h2>
+        </div>
+
+        <div class="interno-opciones interno-opciones2">
+            
+            <div class="tipo-opcion">
+                <img src="../assets/engrane.png">
+                <span>Inicio</span>
+            </div>
+
+            <div class="sub-interno">
+                <a class="option1 option-click" href="" id="option1">
+                    <img src="../assets/add.png" class="imgDash">
+                    <span>Agregar alumno</span>
+                </a>
+
+                <a class="option2 option-click" href="" id="option2">
+                    <img src="../assets/user-check-solid-24.png" class="imgActUser">
+                    <span>Alumnos activos</span>
+                </a>
+
+                <a class="option3 option-click" href="" id="option3">
+                    <img src="../assets/user-solid-24.png" class="imgNActUser">
+                    <span>Alumnos en capacitación</span>
+                </a>
+
+                <a class="option4 option-click" href="" id="option4">
+                    <img src="../assets/time-solid-24.png" class="imgAssent">
+                    <span>Registrar asistencia</span>
+                </a>
+
+                <a class="option5 option-click" href="" id="option5">
+                    <img src="../assets/calendar-check-solid-24.png" class="imgAssentD">
+                    <span>Asistencia del día</span>
+                </a>
+
+                <a class="option6 option-click" href="" id="option6">
+                    <img src="../assets/file-solid-24.png" class="imgFile">
+                    <span>Reportes</span>
+                </a>
+            </div>
+            
+        </div>
+    </main>
+    <script src="dashboard.js"></script>
+</body>
+</html>

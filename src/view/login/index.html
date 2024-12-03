@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <main class="container-fluid">
+        <div class="divPrincipal">
+            <div class="divSecundario">
+                <div class="izquierdo">
+                    <h3>Ingeniería Mecánica</h3>
+                    <img src="../assets/logo.jpg" alt="" class="logo">
+                    <h3 class="tLow">Sistema de control de asistencias de <br> servicio social</h3>
+                </div>
+                <div class="derecho">
+                    <img src="../assets/user2.png" alt="" class="user">
+                    <div id="error-message" style="color: red;"></div>
+                    <form id="loginForm">
+                        <label for="email" class="logIn" id="u">Usuario:</label> <br> 
+                        <input id="email" type="email" class="email" placeholder="Usuario/Correo electronico" required><br>
+                        <label for="password" class="passw">Contraseña:</label><br>
+                        <div class="contra">
+                            <input type="password" name="pass" id="password" class="pass" placeholder="Contraseña" required>
+                            <img src="../assets/eye_hide.png" height="24px" id="vision">
+                        </div>
+                        <br>
+                        <div class="botones">
+                            <button id="btnRegis" type="button" class="btnR">Registrarse</button>
+                            <button id="btnLogin" type="button" class="btnL">Iniciar sesión</button>
+                        </div>
+                        
+                    </form>
+                    <span class="forg" id="forget">¿Olvidaste tu contraseña?</span>
+                </div>
+            </div>
+        </div>     
+        <div id="forgotPasswordModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h4>Recuperar contraseña</h4>
+              <p>Por favor, ingresa tu correo para recuperar la contraseña:</p>
+              <input type="email" id="emailInput" placeholder="Ingresa tu correo" />
+              <br>
+              <button id="recoverPassword">Recuperar contraseña</button>
+        </div>       
+    </main>
+    <script src="../login.js"></script>
+</body>
+</html>

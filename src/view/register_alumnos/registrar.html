@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="interno-Subopciones2">
+        <div class="content">
+            <div class="divBack">
+                <img src="../assets/arrow-back-regular-24.png" class="back" id="regresar">    
+            </div>
+            <div class="content2">
+                <div class="izquierdo">
+                    <form action="" id="formRegis">
+                        <label for="name">Nombre:</label> <br> 
+                        <input type="text" id="name">  <br>
+                        <label for="surname">Apellidos:</label> <br>
+                        <input type="text" id="surname"><br>
+                        <label for="nControl">Número de control:</label><br>
+                        <input type="text" name="nControl" id="nControl"><br>
+                        <label for="correo">Correo electrónico:</label><br>
+                        <input type="email" id="correo"><br>
+                        <label for="mAsignada">Máquin asignada:</label><br>
+                        <select name="mAsignada" id="mAsignada">
+                            <option value="" disabled selected hidden>Selecciona una opción</option>
+                            <Option value="Torno CNC">Torno CNC</Option>
+                            <option value="CMV 3 ejes">CMV de 3 ejes</option>
+                            <option value="Inyectora de plastico">Inyectora de plástico</option>
+                            <option value="Rectificadora">Rectificadora</option>
+                            <option value="Máquina Universal">Máquina Universal</option>
+                            <option value="Impresoras 3D">Impresoras 3D</option>
+                            <option value="CMV 5 ejes">CMV de 5 ejes</option>
+                            <option value="Robot Panasonic">Robot Panasonic</option>
+                            <option value="Robot Fanuc">Robot Fanuc</option>
+                            <option value="Banco de pruebas instrumentación">Banco de pruebas instrumentación</option>
+                            <option value="Banco de pruebas bombas">Banco de pruebas bombas</option>
+                            <option value="Banco de pruebas intercambio de calor">Banco de pruebas intercambio de calor</option>
+                            <option value="Banco de pruebas eq. de aire acondicionado">Banco de pruebas eq. aire acondicionado</option>
+                            <option value="Metrodología">Metrología</option>
+                            <option value="Durómetro">Durómetro</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="derecho">
+                    <h5>Estado:</h5>
+                    <form action="" id="formRegis2">
+                        <input type="radio" name="status" id="active" value="activo">
+                        <label for="active">Activo</label> <br>
+                        <input type="radio" name="status" id="aServicio" value="capacitacion">
+                        <label for="aServicio">En capacitación</label> <br>
+                        <label for="fIngreso">Fecha de ingreso:</label>
+                        <input type="date" name="dateInput" id="date">
+                    </form>
+                    <span>Horario disponible:</span> <br>
+                    <button class="oModal" id="openModal">Selecionar horario</button>
+                    <!--MODAL -->
+                    <div class="modalHorario" id="modal">
+                        <div class="horarioContent">
+                            <span class="close-btn" id="closeModal">&times;</span>
+                            <h3 class="title">Selecciona tus horas disponibles</h2>
+                                <br>
+                            <div id="days">
+
+                            </div>
+                            <button class="register-btn" id="regisHorario">Registrar horario</button>
+                            <button id="limpiarHorario" class="clean-btn">Limpiar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="botones">
+                <button id="regisAlum" class="btnADD">
+                    Agregar
+                </button>
+                <button id="limpiar" class="btnCLEAN">
+                    Limpiar
+                </button>    
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
